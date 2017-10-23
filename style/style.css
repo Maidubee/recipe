@@ -1,5 +1,5 @@
 body {
-    margin: 40px;
+    margin: auto;
 }
 
 .content {
@@ -9,60 +9,65 @@ body {
 
 header {
     grid-area: header;
+    background: url("background.jpg") no-repeat center center fixed;
+    opacity: 0.7;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 500px;
+    max-width: 100%;
+    text-align: center;
 }
 
 footer {
     grid-area: footer;
+    height: 3em;
 }
 
 .wrapper {
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 1em;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
         "header  header  header"
         "content content content"
         "footer  footer  footer";
-    background-color: #fff;
     color: #444;
+    background: #E0EAFC;  /* fallback for old browsers */
 }
 
 .content {
+    margin: 3em;
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 2em;
     grid-template-columns: 1fr 1fr 1fr;
-    background-color: #fff;
-    color: #444;
 }
 
 .item {
+    margin: auto;
+    padding: 2em;
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 1em;
     grid-template-columns: 1fr;
     grid-template-areas:  "title"
                           "picture"
                           "recipe_text"
-    background-color: #fff;
     color: #444;
-    border: 1px;
+    border: 1px solid black;
 }
 
 .item .title{
-  font-size: 2em;
-  height: 2em;
+    font-size: 2em;
+    height: 1.5em;
+    text-align: center;
 }
 
 .item .image{
-  height: 15em;
+    height: 15em;
 }
 
 .item img{
     max-width:100%;
     max-height:100%;
-}
-
-header,
-footer {
-    height: 50px;
-    background-color: #999;
 }
