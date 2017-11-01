@@ -44,6 +44,10 @@ footer {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+.content a {
+text-decoration: none;
+}
+
 .item {
     margin: auto;
     padding: 2em;
@@ -52,9 +56,21 @@ footer {
     grid-template-columns: 1fr;
     grid-template-areas:  "title"
                           "picture"
-                          "recipe_text"
+                          "recipe_text";
     color: #444;
     border: 1px solid black;
+}
+
+.title{
+    grid-area: title;
+}
+
+.picture{
+    grid-area: picture;
+}
+
+.recipe_text{
+    grid-area: recipe_text;
 }
 
 .item .title{
@@ -70,4 +86,27 @@ footer {
 .item img{
     max-width:100%;
     max-height:100%;
+}
+
+.recipe {
+    width: 100%;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "ingredients  steps  food_picture";
+    color: #444;
+    background: #E0EAFC;  /* fallback for old browsers */
+}
+
+.ingredients {
+    grid-area: ingredients;
+}
+
+.steps {
+    grid-area: steps;
+}
+
+.food_picture{
+    grid-area: food_picture;
 }
