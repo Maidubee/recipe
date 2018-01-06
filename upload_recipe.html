@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Upload your new discovery </title>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+</head>
+
+<body class="wrapper">
+    <header>
+        <h1> Welcome Foodlovers! :) </h1>
+        <input type="text"></input>
+    </header>
+    <section class="content add_recipe">
+        <div class="basic_info">
+            <input type="text" name="recipe_name" placeholder="Recipe name">
+        </div>
+        <div class="ingredients">
+            <input type="text" name="ingredients" placeholder="First ingredient">
+            <br>
+            <input type="text" name="ingredients" placeholder="Second ingredient">
+            <br>
+            <input type="text" name="ingredients" placeholder="Third ingredient">
+            <br>
+            <button id="add_ingredient"> Add ingredient </button>
+        </div>
+        <div class="steps">
+            <input type="text" name="steps" placeholder="Add X to Y">
+        </div>
+        <div class="food_picture">
+            <input type="food_picture" name="food_picture">
+        </div>
+        <button>Upload</button>
+    </section>
+    <footer>
+        Footer here
+    </footer>
+</body>
+
+<script>
+    $(function(){
+        console.log("Document ready");
+        $("#add_ingredient").click(function(){
+            var button = $(this);
+            button.parent().append('<input type="text" name="ingredients" placeholder="Another ingredient"><br>');
+            button.parent().append(button);
+        });
+    });
+</script>
+
+</html>

@@ -87,12 +87,52 @@ body {
 
 .recipe .ingredients {
     grid-area: ingredients;
+    border: .1em solid;
+    padding: 3em;
 }
 
 .recipe .steps {
     grid-area: steps;
+    border: .1em solid;
+    padding: 3em;
 }
 
 .recipe .food_picture {
     grid-area: food_picture;
+    border: .1em solid;
+    padding: 3em;
+}
+
+.add_recipe {
+    display: grid;
+    grid-gap: 1em;
+    grid-column: span 3;
+    grid-template-columns: 1fr;
+    grid-template-areas: "basic_info" "ingredients" "steps" "food_picture";
+    color: #444;
+    background: #E0EAFC;
+}
+
+.add_recipe .basic_info {
+    grid-area: basic_info;
+    border: .1em solid;
+    padding: 3em;
+}
+
+.add_recipe .ingredients {
+    grid-area: ingredients;
+    border: .1em solid;
+    padding: 3em;
+}
+
+.add_recipe .steps {
+    grid-area: steps;
+    border: .1em solid;
+    padding: 3em;
+}
+
+.add_recipe .food_picture {
+    grid-area: food_picture
+    border: .1em solid;
+    padding: 3em;
 }
